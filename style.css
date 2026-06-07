@@ -1,0 +1,301 @@
+/* ========================================
+   基本スタイル
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+/* ========================================
+   コンテナ
+   ======================================== */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ========================================
+   ヘッダー
+   ======================================== */
+
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.app-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.app-subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* ========================================
+   メインコンテンツ
+   ======================================== */
+
+.app-main {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+/* ========================================
+   入力セクション
+   ======================================== */
+
+.input-section {
+  margin-bottom: 30px;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.task-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.task-input::placeholder {
+  color: #999;
+}
+
+/* ========================================
+   ボタン共通スタイル
+   ======================================== */
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* 追加ボタン */
+.btn-add {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  min-width: 100px;
+}
+
+.btn-add:hover {
+  opacity: 0.9;
+}
+
+/* 編集ボタン */
+.btn-edit {
+  background: #f0f0f0;
+  color: #667eea;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.btn-edit:hover {
+  background: #e8e8e8;
+}
+
+/* 削除ボタン */
+.btn-delete {
+  background: #f0f0f0;
+  color: #e74c3c;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.btn-delete:hover {
+  background: #ffe6e6;
+}
+
+/* ========================================
+   タスク一覧セクション
+   ======================================== */
+
+.task-section {
+  margin-top: 20px;
+}
+
+.task-list-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.task-list {
+  list-style: none;
+}
+
+/* ========================================
+   タスクアイテム
+   ======================================== */
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #f9f9f9;
+  border-left: 4px solid #667eea;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  background: #f5f5f5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.task-text {
+  flex: 1;
+  font-size: 15px;
+  color: #333;
+  word-break: break-word;
+}
+
+/* ========================================
+   完了済みタスクの状態
+   ======================================== */
+
+.task-item.is-completed {
+  border-left-color: #27ae60;
+  background: #f0f8f4;
+}
+
+.task-item.is-completed .task-text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-item.is-completed:hover {
+  background: #e8f5f0;
+}
+
+/* ========================================
+   タスク操作ボタン
+   ======================================== */
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 16px;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   フッター
+   ======================================== */
+
+.app-footer {
+  background: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: #999;
+}
+
+/* ========================================
+   レスポンシブ対応
+   ======================================== */
+
+@media (max-width: 480px) {
+  .container {
+    border-radius: 0;
+  }
+
+  .app-header {
+    padding: 30px 16px;
+  }
+
+  .app-title {
+    font-size: 24px;
+  }
+
+  .app-main {
+    padding: 20px 16px;
+  }
+
+  .input-wrapper {
+    flex-direction: column;
+  }
+
+  .btn-add {
+    width: 100%;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-actions {
+    margin-left: 0;
+    margin-top: 12px;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    flex: 1;
+  }
+}
